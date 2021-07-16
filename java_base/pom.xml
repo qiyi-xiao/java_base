@@ -16,6 +16,7 @@
     <modules>
         <module>juc</module>
         <module>lc</module>
+        <module>test</module>
     </modules>
 
 
