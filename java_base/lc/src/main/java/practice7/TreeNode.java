@@ -1,4 +1,4 @@
-package practice6;
+package practice7;
 
 /**
  * @author ：qiyingx.xiao
