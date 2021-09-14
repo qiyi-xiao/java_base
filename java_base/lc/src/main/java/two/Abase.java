@@ -41,7 +41,7 @@ public class Abase {
 
 
 
-    public static void main(String[] args) {
+    public static  void main(String[] args) {
     }
 
      Trie[] list = new Trie[26];

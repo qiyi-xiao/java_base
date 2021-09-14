@@ -1,5 +1,6 @@
 package two;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,14 +13,35 @@ import java.util.List;
 
 public class combinationSum3216 {
 
-    public List<List<Integer>> combinationSum3(int k, int n) {
 
+    public static void main(String[] args) {
+        List<List<Integer>> lists = combinationSum3(3, 7);
+        System.out.println(lists);
+    }
 
+    static List<List<Integer>> result = new ArrayList<>();
+    public static List<List<Integer>> combinationSum3(int k, int n) {
 
+        backTrace(new ArrayList<Integer>(), 1, n, k);
+        return result;
+    }
 
+    private static void backTrace(ArrayList<Integer> list, int index, int remainSum, int k) {
+        if (remainSum < index && remainSum != 0){
+            return;
+        }
+        if (list.size() == k){
+            if (remainSum == 0){
+                result.add(new ArrayList<>(list));
+            }
+            return;
+        }
 
-
-        return null;
+        for (int i = index; i <= 9; i++) {
+            list.add(i);
+            backTrace(list, i + 1, remainSum - i, k);
+            list.remove(list.size() - 1);
+        }
     }
 
 }
