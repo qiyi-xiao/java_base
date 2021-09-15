@@ -30,7 +30,7 @@ public class findKthLargest215 {
     }
 
     private static void buildMaxHeap(int[] nums) {
-        for (int i = nums.length / 2; i >= 0; i--) {
+        for (int i = nums.length / 2 + 1; i >= 0; i--) {
             adjustNode(nums, i, nums.length);
         }
     }
